@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(클론코딩)로보토리 에듀</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.gnb > li').mouseleave(function () {
+                $('.gnb > li').find('.depth-02').stop().slideUp();
+            });
+
+            $('.gnb > li').mouseenter(function () {
+                $('.gnb > li').find('.depth-02').stop().slideDown();
+            });
+            
+        });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mainSwiper", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });;//mainSwiper
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="banner">
+                <a href="#">
+                    <img src="img/banner01.jpg" alt="내가 만드는 미래, 미래를 만드는 로봇 코딩 교구 브랜드 로보토리">
+                    <a href="#" class="close_btn"><img src="img/close_btn.png" alt=""></a>
+                </a>
+            </div><!-- .banner end -->
+
+            <div class="bottom_header">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="#"><img src="img/logo.png" alt="로보토리에듀"></a>
+                    </h1><!-- .logo end -->
+
+                    <nav class="nav">
+                        <ul class="gnb">
+                            <li>
+                                <a href="#" class="depth-01">로보토리에듀 소개</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">로보토리에듀 소개</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+
+                            <li>
+                                <a href="#" class="depth-01">어린이 · 청소년교육</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">교육프로그램</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+
+                            <li>
+                                <a href="#" class="depth-01">성인교육</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">교육프로그램</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+
+                            <li>
+                                <a href="#" class="depth-01">교육사례</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">디지털 교육 사례</a></li>
+                                    <li><a href="#">브랜치 소식</a></li>
+                                </ul><!-- .depth-02 end -->
+                            </li>
+
+                            <li>
+                                <a href="#" class="depth-01">공지 · 뉴스</a>
+                            </li>
+                        </ul><!-- .gnb end -->
+                    </nav><!-- .nav end -->
+
+                    <div></div>
+
+                    <a href="#" class="btn gnb_btn">교육신청/상담</a>
+                </div><!-- .inner end -->
+
+                <div class="nav_bg">
+                    <span>헤더배경</span>
+                </div><!-- .nav_bg end -->
+            </div><!-- .bottom_header end -->
+        </header><!-- .header end -->
+
+        <main class="main">
+            <section class="main_visual">
+                <!-- mainSwiper -->
+                <div class="swiper mainSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide slide slide01">
+                            <img src="img/main_visaul1.jpg" alt="“사람” 중심 AI 융합교육 로보토리에듀가 합니다.">
+
+                            <div class="inner">
+                                <div class="main_text">
+                                    <h3 class="title">
+                                        “사람” 중심 AI 융합교육<br>
+                                        로보토리에듀가 합니다.
+                                    </h3>
+
+                                    <p>
+                                        인재와 기술로 세상을 밝고 따뜻하게 변화시키는 교육<br>
+                                        모두 행복해지는 기술의 가치를 전하겠습니다.
+                                    </p>
+                                </div><!-- .main_text end -->
+
+                                <ul class="main_btn">
+                                    <li><a href="#">로보토리에듀 소개</a></li>
+                                    <li><a href="#">교육사례 보기</a></li>
+                                </ul><!-- .main_btn end -->
+                            </div><!-- .inner end -->
+                        </div><!-- .slide01 end -->
+
+                        <div class="swiper-slide slide slide02">
+                            <img src="img/main_visaul2.jpg" alt="라이프앤사이언스㈜ 2024 디지털새싹 사업">
+
+                            <div class="inner">
+                                <div class="main_text">
+                                    <h3 class="title">
+                                        라이프앤사이언스㈜<br>
+                                        2024 디지털새싹 사업
+                                    </h3>
+
+                                    <p>
+                                        라이프앤사이언스 로보토리에듀에서 개발한<br>
+                                        6개 프로그램 및 교구로 경상권역 초·중·고 7,000명 교육
+                                    </p>
+                                </div><!-- .main_text end -->
+
+                                <ul class="main_btn">
+                                    <li><a href="#">교육사례 보기</a></li>
+                                    <li><a href="#">교육신청 하기</a></li>
+                                </ul><!-- .main_btn end -->
+                            </div><!-- .inner end -->
+                        </div><!-- .slide01 end -->
+
+                        <div class="swiper-slide slide slide03">
+                            <img src="img/main_visaul3.jpg" alt="즉시 공교육 적용 가능한 “미래역량함양“ 교육 로보토리에듀 브랜치 모집">
+
+                            <div class="inner">
+                                <div class="main_text">
+                                    <h3 class="title">
+                                        즉시 공교육 적용 가능한<br>
+                                        “미래역량함양“ 교육<br>
+                                        로보토리에듀 브랜치 모집
+                                    </h3>
+
+                                    <p>
+                                        로보토리의 교구와 로보토리에듀의 교육 콘텐츠는<br>
+                                        전세계 25개국 70개 도시에서 사용되고 있습니다.
+                                    </p>
+                                </div><!-- .main_text end -->
+
+                                <ul class="main_btn">
+                                    <li><a href="#">브랜치모집 문의</a></li>
+                                </ul><!-- .main_btn end -->
+                            </div><!-- .inner end -->
+                        </div><!-- .slide01 end -->
+
+                    </div><!-- .swiper-wrapper end -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div><!-- .mainSwiper end -->
+            </section><!-- .main_visual end -->
+
+            <section class="section section-01">
+                <div class="title">
+                    <h2>EDU PROGRAMS</h2>
+
+                    <p>마음이 따뜻해지는 기술 교육,<br>
+                        더 나은 미래와 세상으로의 발걸음<br>
+                        로보토리에듀와 체인지메이커로 도약 하세요.</p>
+                </div><!-- .title end -->
+
+                <div class="content_wrap">
+                    <div class="main_info">
+                        <a href="#">
+                            <div class="image">
+                                <img src="img/info01_img.png" alt="">
+                            </div><!-- .image end -->
+
+                            <div class="text">
+                                <p>#컴퓨팅사고력 #동물복지 #SDGs #AI윤리</p>
+
+                                <div class="bottom_text">
+                                    <p>AI로봇동물 대여점</p>
+                                    <span>(초등3~6학년)</span>
+                                </div><!-- .bottom_text end -->
+                            </div><!-- .text end -->
+                        </a>
+                    </div><!-- .main_info end -->
+
+                    <ul class="side_info">
+                        <li class="info_item">
+                            <div class="inner">
+                                <p>어린이 · 청소년 교육</p>
+
+                                <span>(유아/초/중/고)</span>
+
+                                <a href="#">전체보기</a>
+                            </div><!-- .inner end -->
+                        </li><!-- .info_item end -->
+
+                        <li class="info_item">
+                            <a href="#">
+                                <img src="img/info01_img02.png" alt="">
+                                <div class="inner">
+                                    <div>
+                                        <p class="small">#사고력수학 #컴퓨팅사고력</p>
+                                        <p class="main">딩동</p>
+                                    </div>
+                                    <span>(유아~초등1학년)</span>
+                                </div><!-- .inner end -->
+                            </a>
+                        </li><!-- .info_item end -->
+
+                        <li class="info_item">
+                            <a href="#">
+                                <img src="img/info01_img03.png" alt="">
+                                <div class="inner">
+                                    <div>
+                                        <p class="small">#영상산업과AI #생성형AI</p>
+                                        <p class="main">
+                                            OTT채널 AI영상<br>
+                                            만들기
+                                        </p>
+                                    </div>
+                                    <span>(중/고등)</span>
+                                </div><!-- .inner end -->
+                            </a>
+                        </li><!-- .info_item end -->
+
+                        <li class="info_item">
+                            <a href="#">
+                                <img src="img/info01_img04.png" alt="">
+                                <div class="inner">
+                                    <div>
+                                        <p class="small">#국제교류 #소셜벤처창업 #아이디어톤</p>
+                                        <p class="main">
+                                            한일청소년<br>
+                                            교류캠프
+                                        </p>
+                                    </div>
+                                    <span>(고등)</span>
+                                </div><!-- .inner end -->
+                            </a>
+                        </li><!-- .info_item end -->
+                    </ul><!-- .side_info end -->
+                </div><!-- .content_wrap end -->
+            </section><!-- .section-01 end -->
+
+        </main><!-- .main end -->
+    </div><!-- #wrap end -->
+</body>
+
+</html>
