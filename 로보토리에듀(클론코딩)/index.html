@@ -12,14 +12,15 @@
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script>
         $(function () {
-            $('.gnb > li').mouseleave(function () {
-                $('.gnb > li').find('.depth-02').stop().slideUp();
-            });
+            $('.gnb > li').on('mouseenter', function(){
+                $('.depth-02').stop().slideDown();
+                $('.nav_bg').stop().slideDown();
+            })
 
-            $('.gnb > li').mouseenter(function () {
-                $('.gnb > li').find('.depth-02').stop().slideDown();
-            });
-            
+            $('.gnb > li').on('mouseleave', function(){
+                $('.depth-02').stop().slideUp();
+                $('.nav_bg').stop().slideUp();
+            })
         });
     </script>
 
@@ -28,10 +29,7 @@
     <script>
         window.onload = () => {
             var swiper = new Swiper(".mainSwiper", {
-                pagination: {
-                    el: ".swiper-pagination",
-                    type: "fraction",
-                },
+
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
@@ -181,10 +179,16 @@
                         </div><!-- .slide01 end -->
 
                     </div><!-- .swiper-wrapper end -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div><!-- .mainSwiper end -->
+
+                <div class="visual_btn">
+                    <div class="pagination_custom">
+                        <span class="num">1</span>
+                        <span class="all_num">3</span>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div><!-- .visual_btn end -->
             </section><!-- .main_visual end -->
 
             <section class="section section-01">
@@ -215,11 +219,12 @@
                     </div><!-- .main_info end -->
 
                     <ul class="side_info">
-                        <li class="info_item">
+                        <li class="info_item text_item">
                             <div class="inner">
-                                <p>어린이 · 청소년 교육</p>
-
-                                <span>(유아/초/중/고)</span>
+                                <div>
+                                    <p>어린이 · 청소년 교육</p>
+                                    <span>(유아/초/중/고)</span>
+                                </div>
 
                                 <a href="#">전체보기</a>
                             </div><!-- .inner end -->
@@ -272,6 +277,85 @@
                     </ul><!-- .side_info end -->
                 </div><!-- .content_wrap end -->
             </section><!-- .section-01 end -->
+
+            <section class="section section-02">
+
+                <div class="content_wrap">
+                    <ul class="side_info">
+                        <li class="info_item">
+                            <a href="#">
+                                <img src="img/info02_img01.png" alt="">
+                                <div class="inner">
+                                    <div>
+                                        <p class="small">#찾아가는DX교육 #DX인식변화</p>
+                                        <p class="main">
+                                            중소기업을 위한<br>
+                                            DX-아카데미
+                                        </p>
+                                    </div>
+                                </div><!-- .inner end -->
+                            </a>
+                        </li><!-- .info_item end -->
+
+                        <li class="info_item text_item">
+                            <div class="inner">
+                                <div>
+                                    <p>성인 교육</p>
+                                    <span>(성인/시니어)</span>
+                                </div>
+
+                                <a href="#">전체보기</a>
+                            </div><!-- .inner end -->
+                        </li><!-- .info_item end -->
+
+                        <li class="info_item">
+                            <a href="#">
+                                <img src="img/info02_img02.png" alt="">
+                                <div class="inner">
+                                    <div>
+                                        <p class="small">#디지털리터러시 #시니어DX교육</p>
+                                        <p class="main">
+                                            시니어<br>
+                                            디올 스쿨
+                                        </p>
+                                    </div>
+                                </div><!-- .inner end -->
+                            </a>
+                        </li><!-- .info_item end -->
+
+                        <li class="info_item">
+                            <a href="#">
+                                <img src="img/info02_img03.png" alt="">
+                                <div class="inner">
+                                    <div>
+                                        <p class="small">#중장년층재취업 #디지털기술활용능력</p>
+                                        <p class="main">
+                                            중장년층을 위한<br>
+                                            DX-Training Course
+                                        </p>
+                                    </div>
+                                </div><!-- .inner end -->
+                            </a>
+                        </li><!-- .info_item end -->
+                    </ul><!-- .side_info end -->
+
+                    <div class="main_info">
+                        <a href="#">
+                            <div class="image">
+                                <img src="img/info02_img.png" alt="#디지털소양 #컴퓨팅사고력 #파이썬기초~활용">
+                            </div><!-- .image end -->
+
+                            <div class="text">
+                                <p>#디지털소양 #컴퓨팅사고력 #파이썬기초~활용</p>
+
+                                <div class="bottom_text">
+                                    <p>파이어썬으로 산업용 로봇을 활용하는 로보틱스 LAB</p>
+                                </div><!-- .bottom_text end -->
+                            </div><!-- .text end -->
+                        </a>
+                    </div><!-- .main_info end -->
+                </div><!-- .content_wrap end -->
+            </section><!-- .section-02 end -->
 
         </main><!-- .main end -->
     </div><!-- #wrap end -->
