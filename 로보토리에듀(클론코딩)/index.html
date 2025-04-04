@@ -5,38 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(클론코딩)로보토리 에듀</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script>
         $(function () {
-            $('.gnb > li').on('mouseenter', function(){
+            AOS.init();
+
+            $('.close_btn').on('click', function () {
+                $('.banner').hide();
+                $('.main_visual').addClass('off');
+            });
+
+            $('.gnb > li').on('mouseenter', function () {
                 $('.depth-02').stop().slideDown();
                 $('.nav_bg').stop().slideDown();
             })
 
-            $('.gnb > li').on('mouseleave', function(){
+            $('.gnb > li').on('mouseleave', function () {
                 $('.depth-02').stop().slideUp();
                 $('.nav_bg').stop().slideUp();
             })
-        });
-    </script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        window.onload = () => {
             var swiper = new Swiper(".mainSwiper", {
-
+                spaceBetween: 30,
+                effect: "fade",
+                loop: true,
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
             });;//mainSwiper
-        }
+
+            var swiper = new Swiper(".infoSwiper", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        });
     </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +62,7 @@
             <div class="banner">
                 <a href="#">
                     <img src="img/banner01.jpg" alt="내가 만드는 미래, 미래를 만드는 로봇 코딩 교구 브랜드 로보토리">
-                    <a href="#" class="close_btn"><img src="img/close_btn.png" alt=""></a>
+                    <a href="#" class="close_btn"><img src="img/close_btn.png" alt="닫기 버튼"></a>
                 </a>
             </div><!-- .banner end -->
 
@@ -106,7 +123,7 @@
         <main class="main">
             <section class="main_visual">
                 <!-- mainSwiper -->
-                <div class="swiper mainSwiper">
+                <div class="swiper mainSwiper" data-aos="fade-up" data-aos-delay="200">
                     <div class="swiper-wrapper">
 
                         <div class="swiper-slide slide slide01">
@@ -193,15 +210,15 @@
 
             <section class="section section-01">
                 <div class="title">
-                    <h2>EDU PROGRAMS</h2>
+                    <h2 data-aos="fade-up" data-aos-delay="200">EDU PROGRAMS</h2>
 
-                    <p>마음이 따뜻해지는 기술 교육,<br>
+                    <p data-aos="fade-up" data-aos-delay="300">마음이 따뜻해지는 기술 교육,<br>
                         더 나은 미래와 세상으로의 발걸음<br>
                         로보토리에듀와 체인지메이커로 도약 하세요.</p>
                 </div><!-- .title end -->
 
                 <div class="content_wrap">
-                    <div class="main_info">
+                    <div class="main_info" data-aos="fade-up" data-aos-delay="200">
                         <a href="#">
                             <div class="image">
                                 <img src="img/info01_img.png" alt="">
@@ -219,18 +236,18 @@
                     </div><!-- .main_info end -->
 
                     <ul class="side_info">
-                        <li class="info_item text_item">
+                        <li class="info_item text_item" data-aos="fade-up" data-aos-delay="400">
                             <div class="inner">
                                 <div>
                                     <p>어린이 · 청소년 교육</p>
                                     <span>(유아/초/중/고)</span>
                                 </div>
 
-                                <a href="#">전체보기</a>
+                                <a href="#" class="section_btn">전체보기</a>
                             </div><!-- .inner end -->
                         </li><!-- .info_item end -->
 
-                        <li class="info_item">
+                        <li class="info_item" data-aos="fade-up" data-aos-delay="500">
                             <a href="#">
                                 <img src="img/info01_img02.png" alt="">
                                 <div class="inner">
@@ -243,7 +260,7 @@
                             </a>
                         </li><!-- .info_item end -->
 
-                        <li class="info_item">
+                        <li class="info_item" data-aos="fade-up" data-aos-delay="700">
                             <a href="#">
                                 <img src="img/info01_img03.png" alt="">
                                 <div class="inner">
@@ -259,7 +276,7 @@
                             </a>
                         </li><!-- .info_item end -->
 
-                        <li class="info_item">
+                        <li class="info_item" data-aos="fade-up" data-aos-delay="800">
                             <a href="#">
                                 <img src="img/info01_img04.png" alt="">
                                 <div class="inner">
@@ -282,7 +299,7 @@
 
                 <div class="content_wrap">
                     <ul class="side_info">
-                        <li class="info_item">
+                        <li class="info_item" data-aos="fade-up" data-aos-delay="200">
                             <a href="#">
                                 <img src="img/info02_img01.png" alt="">
                                 <div class="inner">
@@ -297,18 +314,18 @@
                             </a>
                         </li><!-- .info_item end -->
 
-                        <li class="info_item text_item">
+                        <li class="info_item text_item" data-aos="fade-up" data-aos-delay="300">
                             <div class="inner">
                                 <div>
                                     <p>성인 교육</p>
                                     <span>(성인/시니어)</span>
                                 </div>
 
-                                <a href="#">전체보기</a>
+                                <a href="#" class="section_btn">전체보기</a>
                             </div><!-- .inner end -->
                         </li><!-- .info_item end -->
 
-                        <li class="info_item">
+                        <li class="info_item" data-aos="fade-up" data-aos-delay="600">
                             <a href="#">
                                 <img src="img/info02_img02.png" alt="">
                                 <div class="inner">
@@ -323,7 +340,7 @@
                             </a>
                         </li><!-- .info_item end -->
 
-                        <li class="info_item">
+                        <li class="info_item" data-aos="fade-up" data-aos-delay="700">
                             <a href="#">
                                 <img src="img/info02_img03.png" alt="">
                                 <div class="inner">
@@ -339,7 +356,7 @@
                         </li><!-- .info_item end -->
                     </ul><!-- .side_info end -->
 
-                    <div class="main_info">
+                    <div class="main_info" data-aos="fade-up" data-aos-delay="400">
                         <a href="#">
                             <div class="image">
                                 <img src="img/info02_img.png" alt="#디지털소양 #컴퓨팅사고력 #파이썬기초~활용">
@@ -356,6 +373,312 @@
                     </div><!-- .main_info end -->
                 </div><!-- .content_wrap end -->
             </section><!-- .section-02 end -->
+
+            <section class="section section-03">
+
+            </section><!-- .section-03 end -->
+
+            <section class="section section-04">
+                <div class="inner">
+                    <div class="title" data-aos="fade-up" data-aos-delay="200">
+                        <h2>교육사례</h2>
+
+                        <a href="#" class="section_btn">더보기</a>
+                    </div><!-- .title end -->
+
+                    <div class="item_wrap">
+                        <div class="image" data-aos="fade-left" data-aos-delay="300">
+                            <a href="#"><img src="img/info04.png" alt="교육사례"></a>
+                        </div><!-- .image end -->
+
+                        <div class="text_wrap">
+                            <div class="info_text" data-aos="fade-right" data-aos-delay="300">
+                                <p>어린이/청소년 교육</p>
+
+                                <a href="#">교육부 과학창의재단<br>
+                                    디지털 기술로 표현하는 “우리학교”
+                                </a>
+
+                                <ul class="bullet">
+                                    <li><span>기간 : </span>2024.03.01 ~ 2025.02.28</li>
+                                    <li><span>참여인원 : </span>900/1300명</li>
+                                    <li><span>시수 : </span>4차시 (2차시X2일)</li>
+                                    <li><span>핵심소양 : </span>디지털소양</li>
+                                </ul>
+                            </div><!-- .info_text end -->
+
+                            <div class="opinion_text" data-aos="fade-up" data-aos-delay="500">
+                                <p>학교 안내라는 초등 저학년에 적절한 내용으로 이루어져 있습니다. 난이도는 초등 저학년 학생들이 즐겁게 만들고 코딩할 수 있는 주제로 연계성 매우
+                                    높습니다.
+                                </p>
+
+                                <span><span class="strong">프로그램 자문위원 의견中</span></span>
+                            </div><!-- .opinion_text end -->
+                        </div><!-- .text_wrap end -->
+                    </div><!-- .section_wrap end -->
+                </div><!-- .inner end -->
+
+            </section><!-- .section-04 end -->
+
+            <section class="section section-05">
+                <div class="inner">
+                    <div class="title" data-aos="fade-up" data-aos-delay="300">
+                        <h2>로보토리 브랜치 소식</h2>
+
+                        <a href="#" class="section_btn">더보기</a>
+                    </div><!-- .title end -->
+
+                    <div class="item_wrap" data-aos="fade-up" data-aos-delay="500">
+                        <div class="right_item">
+                            <a href="#">
+                                <div class="text">
+                                    <span>[대구수성지사]</span>
+                                    <p>겨울방학특강 로봇코딩</p>
+                                </div><!-- .text end -->
+
+                                <span class="date">
+                                    2024.12.02
+                                </span>
+                            </a>
+                        </div><!-- .right_item end -->
+
+                        <div class="left_item">
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img/sec05_bg.png" alt="로보토리 브랜치를 모집합니다!">
+                                </div><!-- .imag end -->
+
+                                <div class="text">
+                                    <p>로보토리 브랜치를 모집합니다!</p>
+
+                                    <span>
+                                        전 세계 25개국 70개 도시와 함께하고 있는<br>
+                                        로보토리의 미래역량 함양 교육을 통해 미래 인재를<br>
+                                        발굴하고 육성해 나갈 파트너를 모십니다.
+                                    </span>
+                                </div><!-- .text end -->
+                            </a>
+                        </div><!-- .left_item end -->
+                    </div><!-- .item wrap end -->
+                </div><!-- .inner end -->
+            </section><!-- .section-05 end -->
+
+            <section class="section section-06">
+                <div class="title">
+                    <h2>로보토리에듀 강사진</h2>
+                    <p>
+                        로보토리와 함께 미래역량 함양 교육을 함께하고 있는<br>
+                        전문강사를 소개합니다.
+                    </p>
+                </div><!-- .title end -->
+
+                <!-- Swiper -->
+                <div class="swiper infoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="img/sec06_bg.png" alt="">
+                            </div><!-- .image end -->
+
+                            <div class="text_wrap">
+                                <div class="name">
+                                    <p>최민지</p>
+                                    
+                                    <div class="profile">
+                                        <img src="img/th_img01.png" alt="최민지">
+                                    </div><!-- .profile end -->
+                                </div><!-- .name end -->
+
+                                <ul class="bullet">
+                                    <li>(삼성물산) 주니어물산 아카데미 주강사</li>
+                                    <li>(NIA한국지능정보사회진흥원) 코듀에이스 4기 우수강사</li>
+                                    <li>(한국환경보전원) 유아기후환경교육관주강사</li>
+                                </ul>
+                            </div><!-- .text_wrap end -->
+                        </div><!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="img/sec06_bg.png" alt="">
+                            </div><!-- .image end -->
+
+                            <div class="text_wrap">
+                                <div class="name">
+                                    <p>민윤정</p>
+                                    
+                                    <div class="profile">
+                                        <img src="img/th_img02.png" alt="민윤정">
+                                    </div><!-- .profile end -->
+                                </div><!-- .name end -->
+
+                                <ul class="bullet">
+                                    <li>(삼성물산) 주니어물산 아카데미 주강사</li>
+                                    <li>(아우름유니버스) SW·AI 온라인교육 주강사</li>
+                                    <li>(교육부, 한국과학창의재단) 디지털새싹 주강사</li>
+                                </ul>
+                            </div><!-- .text_wrap end -->
+                        </div><!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="img/sec06_bg.png" alt="">
+                            </div><!-- .image end -->
+
+                            <div class="text_wrap">
+                                <div class="name">
+                                    <p>원히오</p>
+                                    
+                                    <div class="profile">
+                                        <img src="img/th_img03.png" alt="원히오">
+                                    </div><!-- .profile end -->
+                                </div><!-- .name end -->
+
+                                <ul class="bullet">
+                                    <li>(삼성물산) 주니어물산 아카데미 주강사</li>
+                                    <li>(교육부, 한국과학창의재단) 디지털새싹 주강사</li>
+                                    <li>(익산예술의전당) AI원정대 주강사</li>
+                                </ul>
+                            </div><!-- .text_wrap end -->
+                        </div><!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="img/sec06_bg.png" alt="">
+                            </div><!-- .image end -->
+
+                            <div class="text_wrap">
+                                <div class="name">
+                                    <p>장정원</p>
+                                    
+                                    <div class="profile">
+                                        <img src="img/th_img04.png" alt="장정원">
+                                    </div><!-- .profile end -->
+                                </div><!-- .name end -->
+
+                                <ul class="bullet">
+                                    <li>(삼성물산) 주니어물산 아카데미 주강사 </li>
+                                    <li>(미래에셋 자산운용) 경제교실 금융 코딩교육 주강사</li>
+                                    <li>(JA코리아) 코딩배달 주강사</li>
+                                    <li>(교육부, 한국과학창의재단) 디지털새싹 주강사</li>
+                                </ul>
+                            </div><!-- .text_wrap end -->
+                        </div><!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="img/sec06_bg.png" alt="">
+                            </div><!-- .image end -->
+
+                            <div class="text_wrap">
+                                <div class="name">
+                                    <p>장지영</p>
+                                    
+                                    <div class="profile">
+                                        <img src="img/th_img05.png" alt="장지영">
+                                    </div><!-- .profile end -->
+                                </div><!-- .name end -->
+
+                                <ul class="bullet">
+                                    <li>(클래스101) 어린이 코딩 프로그램 개발 및 강의</li>
+                                    <li>(삼성물산) 주니어물산 아카데미 주강사</li>
+                                    <li> (아우름유니버스) SW·AI 온라인강좌 개발 및 강의</li>
+                                </ul>
+                            </div><!-- .text_wrap end -->
+                        </div><!-- .swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="img/sec06_bg.png" alt="">
+                            </div><!-- .image end -->
+
+                            <div class="text_wrap">
+                                <div class="name">
+                                    <p>호나샘</p>
+                                    
+                                    <div class="profile">
+                                        <img src="img/th_img06.png" alt="호나샘">
+                                    </div><!-- .profile end -->
+                                </div><!-- .name end -->
+
+                                <ul class="bullet">
+                                    <li>(삼성물산) 주니어물산 아카데미 주강사</li>
+                                    <li>박물관 교육 기획 및 전문 강사</li>
+                                    <li>(문화재단) 문화예술교육 기획개발 </li>
+                                </ul>
+                            </div><!-- .text_wrap end -->
+                        </div><!-- .swiper-slide end -->
+
+
+                    </div><!-- .swiper-wrapper end -->
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div><!-- .infoSwiper end -->
+            </section><!-- .section-06 end -->
+
+            <section class="section section-07">
+                <div class="inner">
+                    <div class="title">
+                        <h2>로보토리 소식</h2>
+
+                        <a href="#" class="section_btn">더보기</a>
+                    </div><!-- .title end -->
+
+                    <ul>
+                        
+                        <li>
+                            <a href="#">
+                                <span class="note">NOTICE</span>
+
+                                <p>강남대학교와 교육, 연구 및 인적자원 교류 등을 통한 협약(MOU)</p>
+
+                                <span class="date">2025.01.09</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <span class="note">NEWS</span>
+
+                                <p>대구한의대학교-국립안동대, 라이프앤사이언스㈜와 2024년 디지털새싹 사업 선정</p>
+
+                                <span class="date">2025.01.09</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <span class="note">NEWS</span>
+
+                                <p>경기도교육청, 용인대학교와 함께 지역 초·중·고 학생 717명 디지털 역량 강화</p>
+
+                                <span class="date">2025.01.09</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <span class="note">NEWS</span>
+
+                                <p>라이프앤사이언스, 경북보건대와 함께하는 DX 트레이닝 코스 성료</p>
+
+                                <span class="date">2024.12.23</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <span class="note">NOTICE</span>
+
+                                <p>디지털교육 전문 로보토리에듀 홈페이지 오픈</p>
+
+                                <span class="date">2024.12.10</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- .inner end -->
+            </section><!-- .section-07 end -->
 
         </main><!-- .main end -->
     </div><!-- #wrap end -->
